@@ -10,3 +10,6 @@ module.name_mapper='^\(.*\)\.\(jpg\|png\|gif\|eot\|svg\|ttf\|woff\|woff2\|mp4\|w
 
 suppress_type=$FlowIssue
 suppress_type=$FlowFixMe
+
+suppress_comment= \\(.\\|\n\\)*\\$FlowIssue
+suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe
