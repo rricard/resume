@@ -1,0 +1,192 @@
+{
+  "basics": {
+    "name": "Robin Ricard",
+    "label": "Software Engineering & Data Science",
+    "picture": "http://www.gravatar.com/avatar/b46620604f6b72c29c26e3cafabb3ca8.png",
+    "email": "rricard@gatech.edu",
+    "phone": "(+33) 6 70 49 66 79",
+    "website": "http://rricard.me",
+    "summary": "JavaScript, Node.js & <strong>React.js expert</strong>. <strong>Machine Learning enthusiast</strong>. I am mostly a self-starter loving to build great products.",
+    "location": {
+      "address": "103 chemin des genevriers",
+      "postalCode": "73190",
+      "city": "St. Baldoph",
+      "countryCode": "FR"
+    },
+    "profiles": [
+      {
+        "network": "Github",
+        "username": "rricard",
+        "url": "https://github.com/rricard"
+      },
+      {
+        "network": "Twitter",
+        "username": "r_ricard",
+        "url": "https://twitter.com/r_ricard"
+      }
+    ]
+  },
+  "work": [
+    {
+       "company": "Jolicloud",
+       "position": "Lead Software Architect",
+       "website": "https://www.jolicloud.com",
+       "startDate": "May 2015",
+       "endDate": "December 2015",
+       "duration": "7 months",
+       "summary": "Jolicloud is the independant cloud operating system.",
+       "highlights": [
+         "Started as an intern, became a full-time contractor",
+         "Rolled production updates to 1M+ subscribed users",
+         "Rewrote essential parts of the product using <strong>React & Javascript ES6</strong>",
+         "Rearchitected the product's stack around more recent and reliable technology"
+       ]
+    },
+    {
+       "company": "Contractor",
+       "position": "Software Engineer",
+       "startDate": "Sept. 2014",
+       "endDate": "May 2015",
+       "duration": "9 months",
+       "highlights": [
+         "Relocated a running production application to an another service provider",
+         "Developed a full-featured Android Application with its server-side Node.js backend"       ]
+    },
+    {
+      "company": "Anyfetch",
+      "position": "Software Engineer & Dev. Ops. Intern",
+      "website": "https://anyfetch.com",
+      "startDate": "July 2013",
+      "endDate": "Sept. 2014",
+      "duration": "~2 years",
+      "summary": "Anyfetch built a powerful multi-cloud indexing technology.",
+      "highlights": [
+        "Worked on the core tech with Node.js, MongoDB, Redis and Elasticsearch",
+        "Setted up the Dev Ops server automation",
+        "Used message queues to connect external APIs"
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Mozilla",
+      "position": "Open Source Contributor",
+      "startDate": "Feb. 2014",
+      "endDate": "Feb. 2015",
+      "duration": "~ 1 year",
+      "highlights": [
+        "Fixed bugs and wrote tests on Firefox for Android",
+        "Got Commit Access Level 1 (try pushes)"
+      ]
+    },
+    {
+      "organization": "INSA Lyon's Student Home",
+      "position": "Board Member & Treasurer",
+      "startDate": "Mar. 2013",
+      "endDate": "Mar. 2014",
+      "duration": "~ 1 year",
+      "summary": "Meeting point for 5000+ students"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Georgia Institute of Technology",
+      "area": "Computer Science - <strong>Machine Learning</strong>",
+      "studyType": "Master of Science",
+      "startDate": "Jan. 2016",
+      "endDate": "July 2017",
+      "gpa": "4.0 (first semester)",
+      "courses": [
+        "CS7641 - <strong>Machine Learning</strong>",
+        "CS7641 - <strong>ML</strong> for Trading",
+        "CS8803 - <strong>Mobile Apps</strong> & Services",
+        "CS6250 - Computer Networks"
+      ]
+    },
+    {
+      "institution": "National Institute for Applied Sciences of Lyon (INSA de Lyon)",
+      "area": "Computer Science",
+      "studyType": "Engineering Degree (Master)",
+      "startDate": "Sept. 2011",
+      "endDate": "Jan. 2017",
+      "gpa": "Ranking: 6/112, Average: 14.85/20"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Data Analytics & Machine Learning",
+      "level": "Good",
+      "keywords": [
+        "Python",
+        "<strong>Numpy</strong>",
+        "<strong>Sklearn</strong>",
+        "Pandas",
+        "Spark"
+      ]
+    },
+    {
+      "name": "Web Backend Development",
+      "level": "Expert",
+      "keywords": [
+        "<strong>Node.js</strong>",
+        "GraphQL",
+        "Clojure",
+        "Python"
+      ]
+    },
+    {
+      "name": "Web Frontend Development",
+      "level": "Expert",
+      "keywords": [
+        "<strong>Javascript ES6</strong>",
+        "<strong>React.js</strong>",
+        "Relay",
+        "Babel",
+        "ClojureScript",
+        "Rails"
+      ]
+    },
+    {
+      "name": "Mobile Development",
+      "level": "Good",
+      "keywords": [
+        "<strong>React Native</strong>",
+        "Java & Android",
+        "iOS, ObjC & Swift"
+      ]
+    },
+    {
+      "name": "Operations Development",
+      "level": "Good",
+      "keywords": [
+        "UNIX Administration",
+        "Ansible",
+        "Containers & Virtualization",
+        "<strong>Docker</strong>"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Fluency & Academic Proficiency (TOEFL: 105/120, TOEIC: 985/990 & GRE, Verbal Reasoning: 152/170)"
+    },
+    {
+      "language": "French",
+      "fluency": "Native Speaker"
+    },
+    {
+      "language": "German",
+      "fluency": "Spoken (B1 european certification)"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Hackathons & Competitions",
+      "keywords": [
+        "Gatech HackCIC second place winner (mobile app competition)",
+        "Google Hashcode first edition, finalist (algoritmic contest)"
+      ]
+    }
+  ]
+}
