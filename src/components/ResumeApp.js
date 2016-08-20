@@ -1,5 +1,5 @@
 /* @flow */
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import {
   Container,
@@ -12,25 +12,23 @@ import type { DataState } from '../reducer/data';
 export type AppProps = {
 };
 
-class App extends Component {
+const ResumeApp = (
   props: AppProps&{
     dataState: DataState,
     requestData: (lang?: string) => Promise<any>,
-  };
-
-  render() {
-    return (
-      <Container className="mainContainer">
-        <Card>
-          <h1>Robin Ricard's resume</h1>
-        </Card>
-      </Container>
-    );
   }
-
-  componentDidMount() {
-    this.props.requestData();
+) => {
+  const { dataState, requestData } = props;
+  if(!dataState.get('loading') && !dataState.get('data')) {
+    window.requestAnimationFrame(() => requestData());
   }
+  return (
+    <Container className="mainContainer">
+      <Card>
+        <h1>Robin Ricard's resume</h1>
+      </Card>
+    </Container>
+  );
 }
 
 const mapStateToProps = (state) => {
@@ -46,9 +44,9 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const AppWithData = connect(
+const ResumeAppWithData = connect(
   mapStateToProps,
   mapDispatchToProps,
-)(App);
+)(ResumeApp);
 
-export default AppWithData;
+export default ResumeAppWithData;
