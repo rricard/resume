@@ -4,10 +4,12 @@ import { connect } from 'react-redux';
 import {
   Container,
   Card,
+  Spinner,
 } from 'elemental';
 import { fetchData } from '../actions';
-import '../styles/App.css';
+import '../styles/ResumeApp.css';
 import type { DataState } from '../reducer/data';
+import type { Map } from 'immutable';
 
 export type AppProps = {
 };
@@ -19,14 +21,20 @@ const ResumeApp = (
   }
 ) => {
   const { dataState, requestData } = props;
-  if(!dataState.get('loading') && !dataState.get('data')) {
+  const loading = dataState.get('loading');
+  const data: ?Map<string, any> = dataState.get('data');
+  if(!loading && !data) {
     window.requestAnimationFrame(() => requestData());
   }
   return (
-    <Container className="mainContainer">
-      <Card>
-        <h1>Robin Ricard's resume</h1>
-      </Card>
+    <Container className="ResumeApp_mainContainer">
+      {loading ? <Spinner size="lg" /> : null}
+      {data ?
+        <Card className="ResumeApp_card">
+          <pre>{JSON.stringify(data.toJS(), null, ' ')}</pre>
+        </Card>
+        : null}
+      
     </Container>
   );
 }

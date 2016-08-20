@@ -12,7 +12,7 @@ import {
 } from '../actions';
 import type { FSA } from '../actions';
 
-export type DataState = Map<string, ?(boolean|string|Error|Map<string, any>)>;
+export type DataState = Map<string, ?any>;
 
 export const initialState = Map({
   loading: false,
