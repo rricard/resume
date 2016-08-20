@@ -1,5 +1,6 @@
 /* @flow */
-import { createStore } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk';
 import resumeAppReducer, {
   initialState,
 } from './reducer';
@@ -8,5 +9,8 @@ export const createResumeStore = () =>
   createStore(
     resumeAppReducer,
     initialState,
-    window.devToolsExtension && window.devToolsExtension()
+    compose(
+      applyMiddleware(thunk),
+      window.devToolsExtension && window.devToolsExtension(),
+    ),
   );
