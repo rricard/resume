@@ -4,9 +4,9 @@
     "label": "Software Engineering & Data Science",
     "picture": "http://www.gravatar.com/avatar/b46620604f6b72c29c26e3cafabb3ca8.png",
     "email": "rricard@gatech.edu",
-    "phone": "(+33) 6 70 49 66 79",
+    "phone": "+33 6 70 49 66 79",
     "website": "http://rricard.me",
-    "summary": "JavaScript, Node.js & <strong>React.js expert</strong>. <strong>Machine Learning enthusiast</strong>. I am mostly a self-starter loving to build great products.",
+    "summary": "JavaScript, Node.js & React.js expert. Functional Programming, Redux & GraphQL ninja. Machine Learning enthusiast. I am mostly a self-starter loving to build great products.",
     "location": {
       "address": "103 chemin des genevriers",
       "postalCode": "73190",
@@ -23,6 +23,11 @@
         "network": "Twitter",
         "username": "r_ricard",
         "url": "https://twitter.com/r_ricard"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "rricard",
+        "url": "https://fr.linkedin.com/in/rricard"
       }
     ]
   },
@@ -38,7 +43,7 @@
        "highlights": [
          "Started as an intern, became a full-time contractor",
          "Rolled production updates to 1M+ subscribed users",
-         "Rewrote essential parts of the product using <strong>React & Javascript ES6</strong>",
+         "Rewrote essential parts of the product using React & Javascript ES6",
          "Rearchitected the product's stack around more recent and reliable technology"
        ]
     },
@@ -91,15 +96,15 @@
   "education": [
     {
       "institution": "Georgia Institute of Technology",
-      "area": "Computer Science - <strong>Machine Learning</strong>",
+      "area": "Computer Science - Machine Learning",
       "studyType": "Master of Science",
       "startDate": "Jan. 2016",
       "endDate": "July 2017",
       "gpa": "4.0 (first semester)",
       "courses": [
-        "CS7641 - <strong>Machine Learning</strong>",
-        "CS7641 - <strong>ML</strong> for Trading",
-        "CS8803 - <strong>Mobile Apps</strong> & Services",
+        "CS7641 - Machine Learning",
+        "CS7641 - ML for Trading",
+        "CS8803 - Mobile Apps & Services",
         "CS6250 - Computer Networks"
       ]
     },
@@ -118,8 +123,8 @@
       "level": "Good",
       "keywords": [
         "Python",
-        "<strong>Numpy</strong>",
-        "<strong>Sklearn</strong>",
+        "Numpy",
+        "Sklearn",
         "Pandas",
         "Spark"
       ]
@@ -128,7 +133,7 @@
       "name": "Web Backend Development",
       "level": "Expert",
       "keywords": [
-        "<strong>Node.js</strong>",
+        "Node.js",
         "GraphQL",
         "Clojure",
         "Python"
@@ -138,9 +143,9 @@
       "name": "Web Frontend Development",
       "level": "Expert",
       "keywords": [
-        "<strong>Javascript ES6</strong>",
-        "<strong>React.js</strong>",
-        "Relay",
+        "Javascript ES6",
+        "React.js",
+        "Apollo",
         "Babel",
         "ClojureScript",
         "Rails"
@@ -150,7 +155,7 @@
       "name": "Mobile Development",
       "level": "Good",
       "keywords": [
-        "<strong>React Native</strong>",
+        "React Native",
         "Java & Android",
         "iOS, ObjC & Swift"
       ]
@@ -162,7 +167,7 @@
         "UNIX Administration",
         "Ansible",
         "Containers & Virtualization",
-        "<strong>Docker</strong>"
+        "Docker"
       ]
     }
   ],

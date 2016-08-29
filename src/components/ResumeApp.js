@@ -8,25 +8,31 @@ import {
 } from 'elemental';
 import gql from 'graphql-tag';
 import { fetchData } from '../actions';
+import {mergeDocumentDefinitions} from '../lib/graphqlTooling';
+import ProfileHeader, {profileFragment} from './ProfileHeader';
 import '../styles/ResumeApp.css';
 import type { DataState } from '../reducer/data';
 import type { Map } from 'immutable';
+import type { GraphQLDocument } from '../lib/graphqlTooling';
 
 export type AppProps = {
 };
 
-const RESUME_QUERY = gql`
+const RESUME_QUERY = mergeDocumentDefinitions(gql`
   {
     basics {
-      name
+      ...Profile
+    }
+    skills {
+      ...ProfileSkills
     }
   }
-`;
+`, profileFragment);
 
 const ResumeApp = (
   props: AppProps&{
     dataState: DataState,
-    requestData: (lang?: string) => Promise<any>,
+    requestData: (query: GraphQLDocument, vars?: any, lang?: string) => Promise<any>,
   }
 ) => {
   const { dataState, requestData } = props;
@@ -38,6 +44,9 @@ const ResumeApp = (
   return (
     <Container className="ResumeApp_mainContainer">
       {loading ? <Spinner size="lg" /> : null}
+      {data ? 
+        <ProfileHeader basics={data.get('basics')} skills={data.get('skills')} /> :
+        null}
       {data ?
         <Card className="ResumeApp_card">
           <pre>{JSON.stringify(data.toJS(), null, ' ')}</pre>

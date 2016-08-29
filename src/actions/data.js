@@ -1,13 +1,15 @@
 /* @flow */
 
-import type { FSA } from './index';
-
 import graphql from 'graphql-anywhere';
+
+import type { FSA } from './index';
+import type { GraphQLDocument } from '../lib/graphqlTooling';
+
 
 export const REQUEST_DATA = 'REQUEST_DATA';
 export type RequestDataPayload = {
   language: string,
-  query: any,
+  query: GraphQLDocument,
   variables: any,
 };
 export const requestData = (payload: RequestDataPayload): FSA => ({
@@ -36,7 +38,7 @@ export const receiveDataError = (payload: ReceiveDataErrorPayload): FSA => ({
 const propertyResolver = (fieldName, root) => root[fieldName];
 
 export const fetchData = (
-  query: any,
+  query: GraphQLDocument,
   variables: any = {},
   language: string = 'en'
 ): (dispatch: Function) => Promise<any> =>
