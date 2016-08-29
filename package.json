@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "elemental": "^0.6.1",
+    "graphql-anywhere": "^0.1.4",
+    "graphql-tag": "^0.1.11",
     "immutable": "^3.8.1",
     "react": "^15.2.1",
     "react-addons-css-transition-group": "^15.3.1",

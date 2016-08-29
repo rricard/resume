@@ -6,6 +6,7 @@ import {
   Card,
   Spinner,
 } from 'elemental';
+import gql from 'graphql-tag';
 import { fetchData } from '../actions';
 import '../styles/ResumeApp.css';
 import type { DataState } from '../reducer/data';
@@ -13,6 +14,14 @@ import type { Map } from 'immutable';
 
 export type AppProps = {
 };
+
+const RESUME_QUERY = gql`
+  {
+    basics {
+      name
+    }
+  }
+`;
 
 const ResumeApp = (
   props: AppProps&{
@@ -24,7 +33,7 @@ const ResumeApp = (
   const loading = dataState.get('loading');
   const data: ?Map<string, any> = dataState.get('data');
   if(!loading && !data) {
-    window.requestAnimationFrame(() => requestData());
+    window.requestAnimationFrame(() => requestData(RESUME_QUERY));
   }
   return (
     <Container className="ResumeApp_mainContainer">

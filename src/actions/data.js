@@ -2,6 +2,8 @@
 
 import type { FSA } from './index';
 
+import graphql from 'graphql-anywhere';
+
 export const REQUEST_DATA = 'REQUEST_DATA';
 export type RequestDataPayload = {
   language: string,
@@ -29,7 +31,11 @@ export const receiveDataError = (payload: ReceiveDataErrorPayload): FSA => ({
   payload,
 });
 
+const propertyResolver = (fieldName, root) => root[fieldName];
+
 export const fetchData = (
+  query: any,
+  variables: any = {},
   language: string = 'en'
 ): (dispatch: Function) => Promise<any> =>
   (dispatch) => {
@@ -40,8 +46,15 @@ export const fetchData = (
       Promise.reject(new Error(`Error response status: ${res.status}`))
     )
     .then(json => {
-      dispatch(receiveData({json}))
-      return json;
+      const resolvedData = graphql(
+        propertyResolver,
+        query,
+        json,
+        {},
+        variables,
+      );
+      dispatch(receiveData({json: resolvedData}))
+      return resolvedData;
     })
     .catch(error => dispatch(receiveDataError({error})));
   };
