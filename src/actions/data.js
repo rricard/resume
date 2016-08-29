@@ -7,6 +7,8 @@ import graphql from 'graphql-anywhere';
 export const REQUEST_DATA = 'REQUEST_DATA';
 export type RequestDataPayload = {
   language: string,
+  query: any,
+  variables: any,
 };
 export const requestData = (payload: RequestDataPayload): FSA => ({
   type: REQUEST_DATA,
@@ -39,7 +41,7 @@ export const fetchData = (
   language: string = 'en'
 ): (dispatch: Function) => Promise<any> =>
   (dispatch) => {
-    dispatch(requestData({language}))
+    dispatch(requestData({language, query, variables}))
     return fetch(`/data/resume.${language}.json`)
     .then(res => res.status < 400 ?
       res.json() :
