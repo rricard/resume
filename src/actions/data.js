@@ -35,7 +35,7 @@ export const receiveDataError = (payload: ReceiveDataErrorPayload): FSA => ({
   payload,
 });
 
-const propertyResolver = (fieldName, root) => root[fieldName];
+const propertyResolver = (fieldName, root) => root ? root[fieldName] : null;
 
 export const fetchData = (
   query: GraphQLDocument,
