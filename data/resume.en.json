@@ -33,43 +33,65 @@
   },
   "work": [
     {
+      "company": "Desktop",
+      "logoUrl": "/images/desktop.png",
+      "position": "Lead Software Architect",
+      "website": "https://home.desktop.pro",
+      "startDate": "June 2016",
+      "endDate": "November 2016",
+      "summary": "Desktop is your personal space for your creativity.",
+      "talks": [
+        {
+          "conference": "Dreamforce",
+          "date": "October 2016",
+          "subject": "Query Relational Data with GraphQL",
+          "url": "https://success.salesforce.com/Sessions?eventId=a1Q3000000qQOd9#/session/a2q3A000000LBekQAG"
+        }
+      ],
+      "openSource": [
+        {
+          "type": "Contributions",
+          "project": "Apollo GraphQL Client",
+          "url": "https://github.com/apollostack/apollo-client"
+        }
+      ],
+      "highlights": [
+        "Converted a large legacy Backbone codebase to React+GraphQL"
+      ]
+    },
+    {
        "company": "Jolicloud",
        "logoUrl": "/images/jolicloud.png",
        "position": "Lead Software Architect",
        "website": "https://www.jolicloud.com",
        "startDate": "May 2015",
        "endDate": "December 2015",
-       "duration": "7 months",
        "summary": "Jolicloud is the independant cloud operating system.",
        "highlights": [
-         "Started as an intern, became a full-time contractor",
+         "Started as an intern, stayed as a contractor",
          "Rolled production updates to 1M+ subscribed users",
-         "Rewrote essential parts of the product using React & Javascript ES6",
-         "Rearchitected the product's stack around more recent and reliable technology"
+         "Rewrote essential parts of the product using React & Javascript ES6"
        ]
     },
     {
-       "company": "Contractor",
-       "position": "Software Engineer",
-       "startDate": "Sept. 2014",
-       "endDate": "May 2015",
-       "duration": "9 months",
-       "highlights": [
-         "Relocated a running production application to an another service provider",
-         "Developed a full-featured Android Application with its server-side Node.js backend"       ]
-    },
-    {
       "company": "Anyfetch",
-      "position": "Software Engineer & Dev. Ops. Intern",
-      "website": "https://anyfetch.com",
+      "logoUrl": "/images/anyfetch.png",
+      "position": "Software Engineer & Dev. Ops. Intern/Contractor",
+      "website": "http://anyfetch.com",
       "startDate": "July 2013",
       "endDate": "Sept. 2014",
       "duration": "~2 years",
       "summary": "Anyfetch built a powerful multi-cloud indexing technology.",
+      "openSource": [
+        {
+          "type": "Maintenance",
+          "project": "Anyfetch Open Source",
+          "url": "https://github.com/anyfetch"
+        }
+      ],
       "highlights": [
         "Worked on the core tech with Node.js, MongoDB, Redis and Elasticsearch",
-        "Setted up the Dev Ops server automation",
-        "Used message queues to connect external APIs"
+        "Dev Ops server automation setup"
       ]
     }
   ],

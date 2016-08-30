@@ -39,12 +39,17 @@ const Timeline = (props: TimelineProps): ?React.Element<*> => {
         <h2 className="Timeline_header"><Glyph icon="briefcase" /> Work</h2>
         {AVAIL ?
           <Card>
-            <p>
-              <strong>Available</strong> starting <strong>{AVAIL}</strong>
-            </p>
-            <Button type="success" onClick={onHireIntent}>
-              Hire Me! <Glyph icon="check" />
-            </Button>
+            <Row>
+              <Col xs="1/2">
+                <strong>Available</strong> starting<br />
+                <strong>{AVAIL}</strong>
+              </Col>
+              <Col xs="1/2">
+                <Button type="success" onClick={onHireIntent}>
+                  Hire Me! <Glyph icon="check" />
+                </Button>
+              </Col>
+            </Row>
           </Card> :
           null}
         {work.map(work =>

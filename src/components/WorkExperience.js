@@ -26,12 +26,18 @@ export const workExperienceFragment = mergeDocumentDefinitions(gql`
     startDate
     endDate
     summary
-    highlights
     talks {
       conference
       date
       subject
+      url
     }
+    openSource {
+      type
+      project
+      url
+    }
+    highlights
   }
 `);
 
@@ -52,13 +58,40 @@ const WorkExperience = (props: WorkExperienceProps): ?React.Element<*> => {
           </Col>
           <Col xs="auto">
             <hgroup>
-              <h3 className="WorkExperience_company">{work.get('company')}</h3>
+              <h3 className="WorkExperience_company">
+                <a href={work.get('website')}>{work.get('company')}</a>
+              </h3>
               <p className="WorkExperience_position">{work.get('position')}</p>
             </hgroup>
           </Col>
         </Row>
         {work.get('summary')}
         <ul className="WorkExperience_points">
+          {work.get('talks').map(talk => talk ?
+            <li key={talk.get('url')}>
+              <a href={talk.get('url')}>
+                <span className="WorkExperience_talk">
+                  <Glyph icon="megaphone" /> Talk
+                </span>
+                <em> {talk.get('subject')}</em> at
+                <strong> {talk.get('conference')} </strong>
+                in {talk.get('date')}
+              </a>
+            </li> :
+            null
+          )}
+          {work.get('openSource').map(proj => proj ?
+            <li key={proj.get('url')}>
+              <a href={proj.get('url')}>
+                <span className="WorkExperience_open">
+                  <Glyph icon="git-pull-request" /> Open Src.
+                </span>
+                <span> {proj.get('type')}</span> on
+                <strong> {proj.get('project')} </strong>
+              </a>
+            </li> :
+            null
+          )}
           {work.get('highlights').map(highlight =>
             <li key={highlight}>
               <span className="WorkExperience_highlight">

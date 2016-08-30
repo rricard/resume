@@ -32,6 +32,11 @@
   font-weight: bold;
 }
 
+.WorkExperience_company a {
+  text-decoration: none;
+  color: black;
+}
+
 .WorkExperience_position {
   margin: 0;
 }
@@ -41,10 +46,33 @@
   padding: 0;
 }
 
+.WorkExperience_points a {
+  text-decoration: none;
+  color: black;
+}
+
 .WorkExperience_highlight {
   display: inline-block;
   color: white;
   background-color: #3B5998;
+  padding: 0.2em;
+  border-radius: 0.2em;
+  font-variant: small-caps;
+}
+
+.WorkExperience_talk {
+  display: inline-block;
+  color: white;
+  background-color: #59983b;
+  padding: 0.2em;
+  border-radius: 0.2em;
+  font-variant: small-caps;
+}
+
+.WorkExperience_open {
+  display: inline-block;
+  color: white;
+  background-color: #4b3b98;
   padding: 0.2em;
   border-radius: 0.2em;
   font-variant: small-caps;
