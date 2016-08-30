@@ -11,6 +11,6 @@ export const createResumeStore = () =>
     initialState,
     compose(
       applyMiddleware(thunk),
-      window.devToolsExtension && window.devToolsExtension(),
+      ...(window.devToolsExtension ? [window.devToolsExtension()] : []),
     ),
   );
