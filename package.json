@@ -2,6 +2,7 @@
   "name": "resume",
   "version": "0.0.1",
   "private": true,
+  "homepage": "http://rricard.github.io/resume",
   "devDependencies": {
     "less": "^2.7.1",
     "less-loader": "^2.2.3",

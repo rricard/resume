@@ -31,7 +31,7 @@ export const timelineFragment = mergeDocumentDefinitions(gql`
   }
 `, workExperienceFragment, academicExperienceFragment);
 
-const AVAIL = '☀️Summer 2017';
+const AVAIL = '☀️ Summer 2017';
 
 const onHireIntent = () => {
   window.location = "mailto:rricard@gatech.edu";
