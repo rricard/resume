@@ -1,0 +1,51 @@
+.WorkExperience_container {
+  text-align: right;
+}
+
+.WorkExperience_endDate {
+  color: grey;
+  margin-left: 50%;
+  border-top: dotted grey 1px;
+  margin: 0.1em;
+}
+
+.WorkExperience_startDate {
+  color: grey;
+  margin-left: 50%;
+  border-bottom: dotted grey 1px;
+  margin: 0.1em;
+}
+
+.WorkExperience_card {
+  text-align: left;
+  margin: 0 !important;
+}
+
+.WorkExperience_picture {
+  height: 35px;
+  width: 35px;
+  margin-right: 0.5em;
+}
+
+.WorkExperience_company {
+  margin: 0;
+  font-weight: bold;
+}
+
+.WorkExperience_position {
+  margin: 0;
+}
+
+.WorkExperience_points {
+  list-style: none;
+  padding: 0;
+}
+
+.WorkExperience_highlight {
+  display: inline-block;
+  color: white;
+  background-color: #3B5998;
+  padding: 0.2em;
+  border-radius: 0.2em;
+  font-variant: small-caps;
+}

@@ -34,6 +34,7 @@
   "work": [
     {
        "company": "Jolicloud",
+       "logoUrl": "/images/jolicloud.png",
        "position": "Lead Software Architect",
        "website": "https://www.jolicloud.com",
        "startDate": "May 2015",

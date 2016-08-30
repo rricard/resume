@@ -44,7 +44,12 @@ const ProfileHeader = (props: ProfileHeaderProps): ?React.Element<*> => {
     <Card className="ProfileHeader_container">
       <Row>
         <Col xs="90px" className="ProfileHeader_picture">
-          <img alt={basics.get('name')} src={basics.get('picture')} />
+          <img
+            alt={basics.get('name')}
+            src={basics.get('picture')}
+            width={80}
+            height={80}
+          />
         </Col>
         <Col xs="auto">
           <hgroup>
