@@ -43,14 +43,16 @@ const ProfileHeader = (props: ProfileHeaderProps): ?React.Element<*> => {
   return (
     <Card className="ProfileHeader_container">
       <Row>
-        <Col xs="90px" className="ProfileHeader_picture">
-          <img
-            alt={basics.get('name')}
-            src={basics.get('picture')}
-            width={80}
-            height={80}
-          />
-        </Col>
+        {window.location.search !== '?nopic' ?
+          <Col xs="90px" className="ProfileHeader_picture">
+            <img
+              alt={basics.get('name')}
+              src={basics.get('picture')}
+              width={80}
+              height={80}
+            />
+          </Col> :
+          null}
         <Col xs="auto">
           <hgroup>
             <h1 className="ProfileHeader_name">{basics.get('name')}</h1>
