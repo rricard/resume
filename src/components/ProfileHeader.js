@@ -2,6 +2,7 @@
 
 import React from 'react';
 import gql from 'graphql-tag';
+import {connect} from 'react-redux';
 import type {Map, List} from 'immutable';
 import {
   Card,
@@ -14,6 +15,7 @@ import '../styles/ProfileHeader.css';
 type ProfileHeaderProps = {
   basics: Map<string, any>,
   skills: List<Map<string, any>>,
+  keywordsRegex: RegExp,
 };
 
 export const profileFragment = gql`
@@ -36,10 +38,8 @@ export const profileFragment = gql`
   }
 `;
 
-const KEY_FILTER = /(js|ql|es|react|script|apollo)/i;
-
 const ProfileHeader = (props: ProfileHeaderProps): ?React.Element<*> => {
-  const {basics, skills} = props;
+  const {basics, skills, keywordsRegex} = props;
   return (
     <Card className="ProfileHeader_container">
       <Row>
@@ -84,7 +84,7 @@ const ProfileHeader = (props: ProfileHeaderProps): ?React.Element<*> => {
             <Glyph icon="tag" />
             {skills.flatMap(skillGroup => 
               skillGroup.get('keywords').filter(keyword =>
-                KEY_FILTER.test(keyword)
+                keywordsRegex.test(keyword)
               )
             ).join(', ')}
           </p>
@@ -95,4 +95,12 @@ const ProfileHeader = (props: ProfileHeaderProps): ?React.Element<*> => {
   )
 };
 
-export default ProfileHeader;
+const ProfileHeaderWithState = connect(
+  (state) => ({
+    keywordsRegex: new RegExp(`(${
+      state.get('options').get('keywords').join('|')
+    })`, 'i'),
+  }),
+)(ProfileHeader);
+
+export default ProfileHeaderWithState;

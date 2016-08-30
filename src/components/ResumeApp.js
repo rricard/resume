@@ -7,13 +7,15 @@ import {
   Spinner,
 } from 'elemental';
 import gql from 'graphql-tag';
-import { fetchData } from '../actions';
+import {
+  fetchData,
+  setPreferredKeywords,
+} from '../actions';
 import {mergeDocumentDefinitions} from '../lib/graphqlTooling';
 import ProfileHeader, {profileFragment} from './ProfileHeader';
 import '../styles/ResumeApp.css';
 import type { DataState } from '../reducer/data';
 import type { Map } from 'immutable';
-import type { GraphQLDocument } from '../lib/graphqlTooling';
 
 export type AppProps = {
 };
@@ -32,14 +34,22 @@ const RESUME_QUERY = mergeDocumentDefinitions(gql`
 const ResumeApp = (
   props: AppProps&{
     dataState: DataState,
-    requestData: (query: GraphQLDocument, vars?: any, lang?: string) => Promise<any>,
+    requestData: Function,
+    setKeywords: Function
   }
 ) => {
-  const { dataState, requestData } = props;
+  const { dataState, requestData, setKeywords } = props;
   const loading = dataState.get('loading');
   const data: ?Map<string, any> = dataState.get('data');
   if(!loading && !data) {
-    window.requestAnimationFrame(() => requestData(RESUME_QUERY));
+    // First render hook
+    window.requestAnimationFrame(() => {
+      requestData();
+      const keywords = window.location.hash;
+      if (keywords) {
+        setKeywords(keywords.slice(1).split(','));
+      }
+    });
   }
   return (
     <Container className="ResumeApp_mainContainer">
@@ -66,7 +76,10 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    requestData: (lang: string = 'en') => dispatch(fetchData(lang)),
+    requestData: (lang: string = 'en') =>
+      dispatch(fetchData(RESUME_QUERY, {}, lang)),
+    setKeywords: (keywords: Array<string>) => 
+      dispatch(setPreferredKeywords({keywords})),
   };
 };
 
