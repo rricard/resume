@@ -60,5 +60,9 @@ export const fetchData = (
       dispatch(receiveData({json: resolvedData}))
       return resolvedData;
     })
-    .catch(error => dispatch(receiveDataError({error})));
+    .catch(error => dispatch(receiveDataError({error: {
+      ...error,
+      message: error.message,
+      stack: error.stack,
+    }})));
   };

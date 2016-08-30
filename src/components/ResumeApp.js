@@ -13,6 +13,7 @@ import {
 } from '../actions';
 import {mergeDocumentDefinitions} from '../lib/graphqlTooling';
 import ProfileHeader, {profileFragment} from './ProfileHeader';
+import Timeline, {timelineFragment} from './Timeline';
 import '../styles/ResumeApp.css';
 import type { DataState } from '../reducer/data';
 import type { Map } from 'immutable';
@@ -34,8 +35,11 @@ const RESUME_QUERY = mergeDocumentDefinitions(gql`
     skills {
       ...ProfileSkills
     }
+    work {
+      ...WorkTimeline
+    }
   }
-`, profileFragment);
+`, profileFragment, timelineFragment);
 
 class ResumeApp extends React.Component {
   props: ConnectedResumeAppProps;
@@ -52,7 +56,10 @@ class ResumeApp extends React.Component {
           <ProfileHeader basics={data.get('basics')} skills={data.get('skills')} /> :
           null}
         {data ?
-          <Card className="ResumeApp_card">
+          <Timeline work={data.get('work')} /> :
+          null}
+        {data && window.location.search === '?debug' ?
+          <Card className="ResumeApp_debug">
             <pre>{JSON.stringify(data.toJS(), null, ' ')}</pre>
           </Card>
           : null}
