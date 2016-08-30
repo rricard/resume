@@ -1,0 +1,79 @@
+.AcademicExperience_container {
+  text-align: left;
+}
+
+.AcademicExperience_endDate {
+  color: grey;
+  margin-left: 50%;
+  border-top: dotted grey 1px;
+  margin: 0.1em;
+}
+
+.AcademicExperience_startDate {
+  color: grey;
+  margin-left: 50%;
+  border-bottom: dotted grey 1px;
+  margin: 0.1em;
+}
+
+.AcademicExperience_card {
+  text-align: left;
+  margin: 0 !important;
+}
+
+.AcademicExperience_picture {
+  height: 35px;
+  width: 35px;
+  margin-right: 0.5em;
+}
+
+.AcademicExperience_institution {
+  margin: 0;
+  font-weight: bold;
+}
+
+.AcademicExperience_institution a {
+  text-decoration: none;
+  color: black;
+}
+
+.AcademicExperience_type {
+  margin: 0;
+}
+
+.AcademicExperience_points {
+  list-style: none;
+  padding: 0;
+}
+
+.AcademicExperience_points a {
+  text-decoration: none;
+  color: black;
+}
+
+.AcademicExperience_course {
+  display: inline-block;
+  color: white;
+  background-color: #3B5998;
+  padding: 0.2em;
+  border-radius: 0.2em;
+  font-variant: small-caps;
+}
+
+.AcademicExperience_project {
+  display: inline-block;
+  color: white;
+  background-color: #59983b;
+  padding: 0.2em;
+  border-radius: 0.2em;
+  font-variant: small-caps;
+}
+
+.AcademicExperience_open {
+  display: inline-block;
+  color: white;
+  background-color: #4b3b98;
+  padding: 0.2em;
+  border-radius: 0.2em;
+  font-variant: small-caps;
+}

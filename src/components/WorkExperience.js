@@ -21,7 +21,6 @@ export const workExperienceFragment = mergeDocumentDefinitions(gql`
     company
     position
     logoUrl
-    cardColor
     website
     startDate
     endDate

@@ -38,6 +38,9 @@ const RESUME_QUERY = mergeDocumentDefinitions(gql`
     work {
       ...WorkTimeline
     }
+    education {
+      ...AcademicTimeline
+    }
   }
 `, profileFragment, timelineFragment);
 
@@ -56,7 +59,7 @@ class ResumeApp extends React.Component {
           <ProfileHeader basics={data.get('basics')} skills={data.get('skills')} /> :
           null}
         {data ?
-          <Timeline work={data.get('work')} /> :
+          <Timeline work={data.get('work')} education={data.get('education')} /> :
           null}
         {data && window.location.search === '?debug' ?
           <Card className="ResumeApp_debug">

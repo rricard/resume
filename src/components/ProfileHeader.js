@@ -81,10 +81,10 @@ const ProfileHeader = (props: ProfileHeaderProps): ?React.Element<*> => {
         </Col>
       </Row>
       <Row className="ProfileHeader_infoRow">
-        <Col md="3/5">
+        <Col md="2/3">
           <p>{basics.get('summary')}</p>
         </Col>
-        <Col md="2/5">
+        <Col md="1/3">
           <p>
             <Glyph icon="tag" />
             {skills.flatMap(skillGroup => 

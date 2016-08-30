@@ -10,12 +10,14 @@ import {
   Button,
 } from 'elemental';
 import WorkExperience, {workExperienceFragment} from './WorkExperience';
+import AcademicExperience, {academicExperienceFragment} from './AcademicExperience';
 import {mergeDocumentDefinitions} from '../lib/graphqlTooling';
 import '../styles/Timeline.css';
 import type {Map, List} from 'immutable';
 
 type TimelineProps = {
   work: List<Map<string, any>>,
+  education: List<Map<string, any>>,
 };
 
 export const timelineFragment = mergeDocumentDefinitions(gql`
@@ -23,7 +25,11 @@ export const timelineFragment = mergeDocumentDefinitions(gql`
     startDate
     ...WorkExperience
   }
-`, workExperienceFragment);
+  fragment AcademicTimeline on Education {
+    startDate
+    ...AcademicExperience
+  }
+`, workExperienceFragment, academicExperienceFragment);
 
 const AVAIL = '☀️Summer 2017';
 
@@ -32,7 +38,7 @@ const onHireIntent = () => {
 };
 
 const Timeline = (props: TimelineProps): ?React.Element<*> => {
-  const {work} = props;
+  const {work, education} = props;
   return (
     <Row>
       <Col md="1/2" className="Timeline_leftcol">
@@ -57,6 +63,8 @@ const Timeline = (props: TimelineProps): ?React.Element<*> => {
       </Col>
       <Col md="1/2">
         <h2 className="Timeline_header"><Glyph icon="mortar-board" /> Academic</h2>
+        {education.map(education =>
+          <AcademicExperience key={education.get('startDate')} education={education} />)}
       </Col>
     </Row>
   );

@@ -6,7 +6,7 @@
     "email": "rricard@gatech.edu",
     "phone": "+33 6 70 49 66 79",
     "website": "http://rricard.me",
-    "summary": "JavaScript, Node.js & React.js expert. Functional Programming, Redux & GraphQL heavy user. Machine Learning enthusiast. I am mostly a self-starter loving to build great products.",
+    "summary": "JavaScript, Node.js & React.js expert. Heavy user of functional Programming, Redux & GraphQL. Machine Learning enthusiast. I am mostly a self-starter loving to build great products while tackling hard problems!",
     "location": {
       "address": "103 chemin des genevriers",
       "postalCode": "73190",
@@ -119,25 +119,62 @@
   "education": [
     {
       "institution": "Georgia Institute of Technology",
-      "area": "Computer Science - Machine Learning",
+      "website": "http://www.gatech.edu/",
+      "logoUrl": "/images/gatech.jpg",
+      "area": "CS - Machine Learning",
+      "studyType": "Master of Science",
+      "startDate": "Jan. 2017",
+      "endDate": "June 2017",
+      "gpa": "TBA",
+      "courses": [],
+      "projects": [],
+      "openSource": []
+    },
+    {
+      "institution": "Georgia Tech Lorraine",
+      "website": "http://lorraine.gatech.edu/",
+      "logoUrl": "/images/gtl.png",
+      "area": "CS - Machine Learning",
       "studyType": "Master of Science",
       "startDate": "Jan. 2016",
-      "endDate": "July 2017",
-      "gpa": "4.0 (first semester)",
+      "endDate": "June 2016",
+      "gpa": "4.0",
       "courses": [
         "CS7641 - Machine Learning",
         "CS7641 - ML for Trading",
-        "CS8803 - Mobile Apps & Services",
         "CS6250 - Computer Networks"
-      ]
+      ],
+      "projects": [
+        "CS8803 - Mobile Apps & Services - 2nd best app of the class - Powered by React Native & Relay",
+        "CS7641 - ML Algorithm Experiments & Papers",
+        "CS6250 - Cloud Backbone IPv6 measures"
+      ],
+      "openSource": []
     },
     {
-      "institution": "National Institute for Applied Sciences of Lyon (INSA de Lyon)",
+      "institution": "INSA Lyon",
+      "website": "https://www.insa-lyon.fr/en/",
+      "logoUrl": "/images/insa.jpeg",
       "area": "Computer Science",
       "studyType": "Engineering Degree (Master)",
       "startDate": "Sept. 2011",
-      "endDate": "Jan. 2017",
-      "gpa": "Ranking: 6/112, Average: 14.85/20"
+      "endDate": "Dec. 2015",
+      "gpa": "Ranking: 6/112, Average: 14.85/20",
+      "courses": [
+        "English - Complete fluency in Academic & Professional domains - TOEFL: 105/120, TOEIC: 985/990 & GRE, Verbal Reasoning: 152/170",
+        "German - Spoken - B1 European certification"
+      ],
+      "projects": [
+        "SmartCity Mobile App - Best app of the school - Node.js backend + Swift App",
+        "Google Hashcode Contest, first edition - Qualified to compete at Google France"
+      ],
+      "openSource": [
+        {
+          "type": "Contributions",
+          "project": "Firefox for Android",
+          "url": "https://www.mozilla.org/en-US/firefox/android/"
+        }
+      ]
     }
   ],
   "skills": [
