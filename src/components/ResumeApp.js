@@ -17,7 +17,13 @@ import '../styles/ResumeApp.css';
 import type { DataState } from '../reducer/data';
 import type { Map } from 'immutable';
 
-export type AppProps = {
+export type ResumeAppProps = {
+};
+
+type ConnectedResumeAppProps = ResumeAppProps&{
+  dataState: DataState,
+  requestData: Function,
+  setKeywords: Function
 };
 
 const RESUME_QUERY = mergeDocumentDefinitions(gql`
@@ -31,61 +37,67 @@ const RESUME_QUERY = mergeDocumentDefinitions(gql`
   }
 `, profileFragment);
 
-const ResumeApp = (
-  props: AppProps&{
-    dataState: DataState,
-    requestData: Function,
-    setKeywords: Function
+class ResumeApp extends React.Component {
+  props: ConnectedResumeAppProps;
+  _hashChangeHandler: ?Function;
+
+  render(): ?React.Element<*> {
+    const { dataState } = this.props;
+    const loading = dataState.get('loading');
+    const data: ?Map<string, any> = dataState.get('data');
+    return (
+      <Container className="ResumeApp_mainContainer">
+        {loading ? <Spinner size="lg" /> : null}
+        {data ? 
+          <ProfileHeader basics={data.get('basics')} skills={data.get('skills')} /> :
+          null}
+        {data ?
+          <Card className="ResumeApp_card">
+            <pre>{JSON.stringify(data.toJS(), null, ' ')}</pre>
+          </Card>
+          : null}
+        
+      </Container>
+    );
   }
-) => {
-  const { dataState, requestData, setKeywords } = props;
-  const loading = dataState.get('loading');
-  const data: ?Map<string, any> = dataState.get('data');
-  if(!loading && !data) {
-    // First render hook
-    window.requestAnimationFrame(() => {
-      requestData();
-      const keywords = window.location.hash;
-      if (keywords) {
-        setKeywords(keywords.slice(1).split(','));
-      }
-    });
+
+  componentDidMount() {
+    this._dataRefresh();
+    this._hashChangeHandler = this._dataRefresh.bind(this);
+    window.addEventListener('hashchange', this._hashChangeHandler);
   }
-  return (
-    <Container className="ResumeApp_mainContainer">
-      {loading ? <Spinner size="lg" /> : null}
-      {data ? 
-        <ProfileHeader basics={data.get('basics')} skills={data.get('skills')} /> :
-        null}
-      {data ?
-        <Card className="ResumeApp_card">
-          <pre>{JSON.stringify(data.toJS(), null, ' ')}</pre>
-        </Card>
-        : null}
-      
-    </Container>
-  );
+
+  componentWillUnmount() {
+    if (this._hashChangeHandler) {
+      window.removeEventListener('hashchange', this._hashChangeHandler);
+    }
+  }
+
+  _dataRefresh() {
+    const { requestData, setKeywords } = this.props;
+    requestData();
+    const keywords = window.location.hash;
+    if (keywords) {
+      setKeywords(keywords.slice(1).split(','));
+    }
+  }
 }
 
-const mapStateToProps = (state) => {
-  const dataState = state.get('data');
-  return {
-    dataState,
-  };
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    requestData: (lang: string = 'en') =>
-      dispatch(fetchData(RESUME_QUERY, {}, lang)),
-    setKeywords: (keywords: Array<string>) => 
-      dispatch(setPreferredKeywords({keywords})),
-  };
-};
-
-const ResumeAppWithData = connect(
-  mapStateToProps,
-  mapDispatchToProps,
+const ResumeAppWithState = connect(
+  (state) => {
+    const dataState = state.get('data');
+    return {
+      dataState,
+    };
+  },
+  (dispatch) => {
+    return {
+      requestData: (lang: string = 'en') =>
+        dispatch(fetchData(RESUME_QUERY, {}, lang)),
+      setKeywords: (keywords: Array<string>) => 
+        dispatch(setPreferredKeywords({keywords})),
+    };
+  },
 )(ResumeApp);
 
-export default ResumeAppWithData;
+export default ResumeAppWithState;
