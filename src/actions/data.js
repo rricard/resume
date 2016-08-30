@@ -44,7 +44,7 @@ export const fetchData = (
 ): (dispatch: Function) => Promise<any> =>
   (dispatch) => {
     dispatch(requestData({language, query, variables}))
-    return fetch(`/data/resume.${language}.json`)
+    return fetch(`./data/resume.${language}.json`)
     .then(res => res.status < 400 ?
       res.json() :
       Promise.reject(new Error(`Error response status: ${res.status}`))

@@ -26,7 +26,7 @@
     "build": "react-scripts build",
     "postbuild": "sh ./scripts/postbuild.sh",
     "eject": "react-scripts eject",
-    "prepublish": "npm run build && npm run postbuild",
+    "prepublish": "npm run build",
     "publish": "sh ./scripts/publish.sh"
   },
   "eslintConfig": {

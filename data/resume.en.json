@@ -34,7 +34,7 @@
   "work": [
     {
       "company": "Desktop",
-      "logoUrl": "/images/desktop.png",
+      "logoUrl": "./images/desktop.png",
       "position": "Lead Software Architect",
       "website": "https://home.desktop.pro",
       "startDate": "June 2016",
@@ -61,7 +61,7 @@
     },
     {
        "company": "Jolicloud",
-       "logoUrl": "/images/jolicloud.png",
+       "logoUrl": "./images/jolicloud.png",
        "position": "Lead Software Architect",
        "website": "https://www.jolicloud.com",
        "startDate": "May 2015",
@@ -75,7 +75,7 @@
     },
     {
       "company": "Anyfetch",
-      "logoUrl": "/images/anyfetch.png",
+      "logoUrl": "./images/anyfetch.png",
       "position": "Software Engineer & Dev. Ops. Intern/Contractor",
       "website": "http://anyfetch.com",
       "startDate": "July 2013",
@@ -120,7 +120,7 @@
     {
       "institution": "Georgia Institute of Technology",
       "website": "http://www.gatech.edu/",
-      "logoUrl": "/images/gatech.jpg",
+      "logoUrl": "./images/gatech.jpg",
       "area": "CS - Machine Learning",
       "studyType": "Master of Science",
       "startDate": "Jan. 2017",
@@ -133,7 +133,7 @@
     {
       "institution": "Georgia Tech Lorraine",
       "website": "http://lorraine.gatech.edu/",
-      "logoUrl": "/images/gtl.png",
+      "logoUrl": "./images/gtl.png",
       "area": "CS - Machine Learning",
       "studyType": "Master of Science",
       "startDate": "Jan. 2016",
@@ -154,7 +154,7 @@
     {
       "institution": "INSA Lyon",
       "website": "https://www.insa-lyon.fr/en/",
-      "logoUrl": "/images/insa.jpeg",
+      "logoUrl": "./images/insa.jpeg",
       "area": "Computer Science",
       "studyType": "Engineering Degree (Master)",
       "startDate": "Sept. 2011",
