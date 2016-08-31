@@ -73,6 +73,11 @@ const Timeline = (props: TimelineProps): ?React.Element<*> => {
             <AcademicExperience key={education.get('startDate')} education={education} />)}
         </Col>
       </Row>
+      <Row>
+        <Col className="Timeline_chevron">
+          Time
+        </Col>
+      </Row>
     </div>
   );
 };

@@ -12,5 +12,7 @@
 }
 
 .Timeline_chevron {
+  color: grey;
   text-align: center;
+  font-variant: small-caps;
 }
