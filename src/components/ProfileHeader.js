@@ -84,7 +84,7 @@ const ProfileHeader = (props: ProfileHeaderProps): ?React.Element<*> => {
       </Row>
       <Row className="ProfileHeader_infoRow">
         <Col md="2/3">
-          <p>{basics.get('summary')}</p>
+          <p className="ProfileHeader_summary">{basics.get('summary')}</p>
         </Col>
         <Col md="1/3">
           <p>
