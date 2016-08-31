@@ -44,7 +44,9 @@ const WorkExperience = (props: WorkExperienceProps): ?React.Element<*> => {
   const {work} = props;
   return (
     <div className="WorkExperience_container">
-      <span className="WorkExperience_endDate">{work.get('endDate')}</span>
+      <span className="WorkExperience_endDate">
+        {work.get('endDate')} <Glyph icon="arrow-small-right" />
+      </span>
       <Card className="WorkExperience_card">
         <Row>
           <Col xs="35px" className="WorkExperience_picture">
@@ -101,7 +103,9 @@ const WorkExperience = (props: WorkExperienceProps): ?React.Element<*> => {
           )}
         </ul>
       </Card>
-      <span className="WorkExperience_startDate">{work.get('startDate')}</span>
+      <span className="WorkExperience_startDate">
+        {work.get('startDate')} <Glyph icon="arrow-small-right" />
+      </span>
     </div>
   );
 };

@@ -40,7 +40,9 @@ const AcademicExperience = (props: AcademicExperienceProps): ?React.Element<*> =
   const {education} = props;
   return (
     <div className="AcademicExperience_container">
-      <span className="AcademicExperience_endDate">{education.get('endDate')}</span>
+      <span className="AcademicExperience_endDate">
+        <Glyph icon="arrow-small-left" /> {education.get('endDate')}
+      </span>
       <Card className="AcademicExperience_card">
         <Row>
           <Col xs="35px" className="AcademicExperience_picture">
@@ -94,7 +96,9 @@ const AcademicExperience = (props: AcademicExperienceProps): ?React.Element<*> =
           )}
         </ul>
       </Card>
-      <span className="AcademicExperience_startDate">{education.get('startDate')}</span>
+      <span className="AcademicExperience_startDate">
+        <Glyph icon="arrow-small-left" /> {education.get('startDate')}
+      </span>
     </div>
   );
 };

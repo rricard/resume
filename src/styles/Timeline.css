@@ -2,7 +2,15 @@
   border-right: dotted grey 1px;
 }
 
+.Timeline_rightcol {
+  border-left: dotted grey 1px;
+}
+
 .Timeline_header {
   font-size: 18px;
   font-variant: small-caps;
+}
+
+.Timeline_chevron {
+  text-align: center;
 }

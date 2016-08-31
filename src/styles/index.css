@@ -8,4 +8,16 @@ body {
   body {
     font-size: 12px;
   }
+
+  .WorkExperience_highlight,
+  .WorkExperience_talk,
+  .WorkExperience_open {
+    width: 6.5em;
+  }
+
+  .AcademicExperience_course,
+  .AcademicExperience_project,
+  .AcademicExperience_open {
+    width: 6.5em;
+  }
 }
