@@ -51,13 +51,26 @@
   color: black;
 }
 
+.WorkExperience_point {
+  display: flex;
+  flex-direction: row;
+}
+
+.WorkExperience_pointDescription {
+  display: block;
+  flex: 1; 
+  margin: 0.1em;
+  padding: 0.2em;
+}
+
 .WorkExperience_highlight,
 .WorkExperience_talk,
 .WorkExperience_open {
-  display: inline-block;
+  display: block;
   padding: 0.2em; 
   margin: 0.1em;
   width: 6.1em;
+  height: 1.7em;
   border-radius: 0.2em;
   font-variant: small-caps;
 }

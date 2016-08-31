@@ -6,7 +6,7 @@ body {
 
 @media print {
   body {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .WorkExperience_highlight,

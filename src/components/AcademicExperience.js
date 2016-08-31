@@ -68,30 +68,36 @@ const AcademicExperience = (props: AcademicExperienceProps): ?React.Element<*> =
         <ul className="AcademicExperience_points">
           {education.get('openSource').map(proj => proj ?
             <li key={proj.get('url')}>
-              <a href={proj.get('url')}>
+              <a href={proj.get('url')} className="AcademicExperience_point">
                 <span className="AcademicExperience_open">
                   <Glyph icon="git-pull-request" /> Open Src.
                 </span>
-                <span> {proj.get('type')}</span> on
-                <strong> {proj.get('project')} </strong>
+                <span className="AcademicExperience_pointDescription">
+                  <span> {proj.get('type')}</span> on
+                  <strong> {proj.get('project')} </strong>
+                </span>
               </a>
             </li> :
             null
           )}
           {education.get('projects').map(proj =>
-            <li key={proj}>
+            <li key={proj} className="AcademicExperience_point">
               <span className="AcademicExperience_project">
                 <Glyph icon="code" /> Project
               </span>
-              {' ' + proj}
+              <span className="AcademicExperience_pointDescription">
+                {' ' + proj}
+              </span>
             </li>
           )}
           {education.get('courses').map(course =>
-            <li key={course}>
+            <li key={course} className="AcademicExperience_point">
               <span className="AcademicExperience_course">
                 <Glyph icon="repo" /> Course
               </span>
-              {' ' + course}
+              <span className="AcademicExperience_pointDescription">
+                {' ' + course}
+              </span>
             </li>
           )}
         </ul>

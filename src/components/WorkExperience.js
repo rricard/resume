@@ -70,35 +70,41 @@ const WorkExperience = (props: WorkExperienceProps): ?React.Element<*> => {
         <ul className="WorkExperience_points">
           {work.get('talks').map(talk => talk ?
             <li key={talk.get('url')}>
-              <a href={talk.get('url')}>
+              <a href={talk.get('url')} className="WorkExperience_point">
                 <span className="WorkExperience_talk">
                   <Glyph icon="megaphone" /> Talk
                 </span>
-                <em> {talk.get('subject')}</em> at
-                <strong> {talk.get('conference')} </strong>
-                in {talk.get('date')}
+                <span className="WorkExperience_pointDescription">
+                  <em> {talk.get('subject')}</em> at
+                  <strong> {talk.get('conference')} </strong>
+                  in {talk.get('date')}
+                </span>
               </a>
             </li> :
             null
           )}
           {work.get('openSource').map(proj => proj ?
             <li key={proj.get('url')}>
-              <a href={proj.get('url')}>
+              <a href={proj.get('url')} className="WorkExperience_point">
                 <span className="WorkExperience_open">
                   <Glyph icon="git-pull-request" /> Open Src.
                 </span>
-                <span> {proj.get('type')}</span> on
-                <strong> {proj.get('project')} </strong>
+                <span className="WorkExperience_pointDescription">
+                  <span> {proj.get('type')}</span> on
+                  <strong> {proj.get('project')} </strong>
+                </span>
               </a>
             </li> :
             null
           )}
           {work.get('highlights').map(highlight =>
-            <li key={highlight}>
+            <li key={highlight} className="WorkExperience_point">
               <span className="WorkExperience_highlight">
                 <Glyph icon="eye" /> Highlight
               </span>
-              {' ' + highlight}
+              <span className="WorkExperience_pointDescription">
+                {' ' + highlight}
+              </span>
             </li>
           )}
         </ul>
