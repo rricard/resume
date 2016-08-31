@@ -51,29 +51,28 @@
   color: black;
 }
 
-.AcademicExperience_course {
+.AcademicExperience_course,
+.AcademicExperience_project,
+.AcademicExperience_open {
   display: inline-block;
-  color: white;
-  background-color: #3B5998;
   padding: 0.2em;
+  margin: 0.1em;
+  width: 6.1em;
   border-radius: 0.2em;
   font-variant: small-caps;
+}
+
+.AcademicExperience_course {
+  color: white;
+  background-color: #3B5998;
 }
 
 .AcademicExperience_project {
-  display: inline-block;
   color: white;
   background-color: #59983b;
-  padding: 0.2em;
-  border-radius: 0.2em;
-  font-variant: small-caps;
 }
 
 .AcademicExperience_open {
-  display: inline-block;
   color: white;
   background-color: #4b3b98;
-  padding: 0.2em;
-  border-radius: 0.2em;
-  font-variant: small-caps;
 }

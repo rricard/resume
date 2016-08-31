@@ -51,29 +51,28 @@
   color: black;
 }
 
-.WorkExperience_highlight {
+.WorkExperience_highlight,
+.WorkExperience_talk,
+.WorkExperience_open {
   display: inline-block;
-  color: white;
-  background-color: #3B5998;
-  padding: 0.2em;
+  padding: 0.2em; 
+  margin: 0.1em;
+  width: 6.1em;
   border-radius: 0.2em;
   font-variant: small-caps;
+}
+
+.WorkExperience_highlight {
+  color: white;
+  background-color: #3B5998;
 }
 
 .WorkExperience_talk {
-  display: inline-block;
   color: white;
   background-color: #59983b;
-  padding: 0.2em;
-  border-radius: 0.2em;
-  font-variant: small-caps;
 }
 
 .WorkExperience_open {
-  display: inline-block;
   color: white;
   background-color: #4b3b98;
-  padding: 0.2em;
-  border-radius: 0.2em;
-  font-variant: small-caps;
 }
