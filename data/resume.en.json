@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Robin Ricard",
-    "label": "Software Engineering & Data Science",
+    "label": "Software Engineering & Architecture",
     "picture": "http://www.gravatar.com/avatar/b46620604f6b72c29c26e3cafabb3ca8.png",
     "email": "rricard@gatech.edu",
     "phone": "+33 6 70 49 66 79",
@@ -35,10 +35,10 @@
     {
       "company": "Desktop",
       "logoUrl": "./images/desktop.png",
-      "position": "Lead Software Architect",
+      "position": "Lead Software Architect as an Intern",
       "website": "https://home.desktop.pro",
       "startDate": "June 2016",
-      "endDate": "November 2016",
+      "endDate": "December 2016",
       "summary": "Desktop is your personal space for your creativity.",
       "talks": [
         {
@@ -50,27 +50,32 @@
       ],
       "openSource": [
         {
-          "type": "Contributions",
+          "type": "Core Community Contributor",
           "project": "Apollo GraphQL Client",
           "url": "https://github.com/apollostack/apollo-client"
+        },
+        {
+          "type": "Contributor",
+          "project": "React",
+          "url": "https://github.com/facebook/react"
         }
       ],
       "highlights": [
-        "Converted a large legacy Backbone codebase to React+GraphQL"
+        "Converted progressively a large legacy Backbone codebase to React+GraphQL",
+        "Created an iOS+Android React Native app"
       ]
     },
     {
        "company": "Jolicloud",
        "logoUrl": "./images/jolicloud.png",
-       "position": "Lead Software Architect",
+       "position": "Lead Software Architect as an Intern/Contractor",
        "website": "https://www.jolicloud.com",
        "startDate": "May 2015",
        "endDate": "December 2015",
        "summary": "Jolicloud is the independant cloud operating system.",
        "highlights": [
-         "Started as an intern, stayed as a contractor",
-         "Rolled production updates to 1M+ subscribed users",
-         "Rewrote essential parts of the product using React & Javascript ES6"
+         "Rewrote essential parts of the product using React & Javascript ES6",
+         "Started as an intern, stayed as a contractor"
        ]
     },
     {
@@ -125,7 +130,7 @@
       "studyType": "Master of Science",
       "startDate": "Jan. 2017",
       "endDate": "June 2017",
-      "gpa": "TBA",
+      "gpa": null,
       "courses": [],
       "projects": [],
       "openSource": []
@@ -145,8 +150,8 @@
         "CS6250 - Computer Networks"
       ],
       "projects": [
-        "CS8803 - Mobile Apps & Services - 2nd best app of the school - Powered by React Native & Relay",
-        "CS7641 - ML Algorithm Experiments & Papers",
+        "CS8803 - Mobile App - 2nd best app - Powered by React Native & Relay",
+        "CS7641 - ML Experiments & Papers",
         "CS6250 - Cloud Backbone IPv6 measures"
       ],
       "openSource": []
@@ -206,6 +211,8 @@
         "Javascript ES7",
         "React.js",
         "Apollo",
+        "Redux",
+        "Flux",
         "Babel",
         "ClojureScript",
         "Rails"

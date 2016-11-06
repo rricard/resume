@@ -64,7 +64,9 @@ const AcademicExperience = (props: AcademicExperienceProps): ?React.Element<*> =
             </hgroup>
           </Col>
         </Row>
-        <strong>Grades/GPA: </strong>{education.get('gpa')}
+        {education.get('gpa') ?
+          <span><strong>Grades/GPA: </strong>{education.get('gpa')}</span> :
+          null}
         <ul className="AcademicExperience_points">
           {education.get('openSource').map(proj => proj ?
             <li key={proj.get('url')}>

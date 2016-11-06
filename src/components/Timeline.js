@@ -50,7 +50,7 @@ const Timeline = (props: TimelineProps): ?React.Element<*> => {
         <Col md="1/2" className="Timeline_leftcol">
           <h2 className="Timeline_header"><Glyph icon="briefcase" /> Work</h2>
           {AVAIL ?
-            <Card>
+            <Card className="Timeline_availability">
               <Row>
                 <Col xs="1/2">
                   <strong>Available</strong> starting<br />

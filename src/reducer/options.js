@@ -13,7 +13,7 @@ import type { FSA } from '../actions';
 export type OptionsState = Map<string, any>;
 
 export const initialState = Map({
-  keywords: List.of('js', 'ql', 'es', 'react', 'script', 'apollo')
+  keywords: List.of('js', 'ql', 'es', 'react', 'script', 'redux', 'flux')
 });
 
 const reducer = (state: OptionsState = initialState, action: FSA) => {

@@ -16,3 +16,9 @@
   text-align: center;
   font-variant: small-caps;
 }
+
+@media print {
+  .Timeline_availability {
+    display: none;
+  }
+}
