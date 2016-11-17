@@ -102,7 +102,7 @@ const ResumeAppWithState = connect(
   },
   (dispatch) => {
     return {
-      requestData: (lang: string = 'en') =>
+      requestData: (lang: string = window.location.search === '?fr' ? 'fr' : 'en') =>
         dispatch(fetchData(RESUME_QUERY, {}, lang)),
       setKeywords: (keywords: Array<string>) => 
         dispatch(setPreferredKeywords({keywords})),

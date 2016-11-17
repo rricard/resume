@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Robin Ricard",
-    "label": "Software Engineering & Architecture",
+    "label": "Ingénieurie et Architecture Logicielle",
     "picture": "http://www.gravatar.com/avatar/b46620604f6b72c29c26e3cafabb3ca8.png",
-    "email": "rricard@gatech.edu",
+    "email": "rricard@insa-lyon.fr",
     "phone": "+33 6 70 49 66 79",
     "website": "http://rricard.me",
-    "summary": "JavaScript, Node.js & React.js expert. Heavy user of functional Programming, Redux & GraphQL. Machine Learning enthusiast. I am mostly a self-starter loving to build great products while tackling hard problems!",
+    "summary": "Expert en JavaScript, Node.js & React.js. Utilisateur de Redux, GraphQL et de Programmation fonctionnelle. Enthousiaste du Machine Learning.",
     "location": {
       "address": "103 chemin des genevriers",
       "postalCode": "73190",
@@ -35,90 +35,67 @@
     {
       "company": "Desktop",
       "logoUrl": "./images/desktop.png",
-      "position": "Lead Software Architect as an Intern",
+      "position": "Stagiaire Architecte Logiciel",
       "website": "https://home.desktop.pro",
-      "startDate": "June 2016",
-      "endDate": "December 2016",
-      "summary": "Desktop is your personal space for your creativity.",
+      "startDate": "Juin 2016",
+      "endDate": "Déc. 2016",
+      "summary": "Desktop est espace créatif personnel",
       "talks": [
         {
           "conference": "Dreamforce",
           "date": "October 2016",
-          "subject": "Query Relational Data with GraphQL",
+          "subject": "Requêtes relationnelles dans GraphQL",
           "url": "https://success.salesforce.com/Sessions?eventId=a1Q3000000qQOd9#/session/a2q3A000000LBekQAG"
         }
       ],
       "openSource": [
         {
-          "type": "Core Community Contributor",
-          "project": "Apollo GraphQL Client",
+          "type": "Contributeur \"Core\"",
+          "project": "Client GraphQL Apollo",
           "url": "https://github.com/apollostack/apollo-client"
         },
         {
-          "type": "Contributor",
+          "type": "Contributeur",
           "project": "React",
           "url": "https://github.com/facebook/react"
         }
       ],
       "highlights": [
-        "Converted progressively a large legacy Backbone codebase to React+GraphQL",
-        "Created an iOS+Android React Native app"
+        "A converti une large base de code sur React & GraphQL",
+        "A crée une application iOS & Android avec React Native"
       ]
     },
     {
        "company": "Jolicloud",
        "logoUrl": "./images/jolicloud.png",
-       "position": "Lead Software Architect as an Intern/Contractor",
+       "position": "Stagiaire Architecte Logiciel",
        "website": "https://www.jolicloud.com",
-       "startDate": "May 2015",
-       "endDate": "December 2015",
-       "summary": "Jolicloud is the independant cloud operating system.",
+       "startDate": "Mai 2015",
+       "endDate": "Sept. 2015",
+       "summary": "Jolicloud est un système d'exploitation indépendant.",
        "highlights": [
-         "Rewrote essential parts of the product using React & Javascript ES6",
-         "Started as an intern, stayed as a contractor"
+         "A réecrit une partie de la base de code avec React et Javascript ES6"
        ]
     },
     {
       "company": "Anyfetch",
       "logoUrl": "./images/anyfetch.png",
-      "position": "Software Engineer & Dev. Ops. Intern/Contractor",
+      "position": "Stagiaire Full-Stack & Dev. Ops.",
       "website": "http://anyfetch.com",
-      "startDate": "July 2013",
+      "startDate": "Juin 2014",
       "endDate": "Sept. 2014",
-      "duration": "~2 years",
-      "summary": "Anyfetch built a powerful multi-cloud indexing technology.",
+      "summary": "Anyfetch était une platforme d'indexation multi-cloud.",
       "openSource": [
         {
           "type": "Maintenance",
-          "project": "Anyfetch Open Source",
+          "project": "Modules Open Source d'Anyfetch",
           "url": "https://github.com/anyfetch"
         }
       ],
       "highlights": [
-        "Worked on the core tech with Node.js, MongoDB, Redis and Elasticsearch",
-        "Dev Ops server automation setup"
+        "A travaillé sur le coeur technologique avec Node.js, MongoDB, Redis et Elasticsearch",
+        "Automatisation des tâches serveurs avec du Dev Ops."
       ]
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "Mozilla",
-      "position": "Open Source Contributor",
-      "startDate": "Feb. 2014",
-      "endDate": "Feb. 2015",
-      "duration": "~ 1 year",
-      "highlights": [
-        "Fixed bugs and wrote tests on Firefox for Android",
-        "Got Commit Access Level 1 (try pushes)"
-      ]
-    },
-    {
-      "organization": "INSA Lyon's Student Home",
-      "position": "Board Member & Treasurer",
-      "startDate": "Mar. 2013",
-      "endDate": "Mar. 2014",
-      "duration": "~ 1 year",
-      "summary": "Meeting point for 5000+ students"
     }
   ],
   "education": [
@@ -126,10 +103,10 @@
       "institution": "Georgia Institute of Technology",
       "website": "http://www.gatech.edu/",
       "logoUrl": "./images/gatech.jpg",
-      "area": "CS - Machine Learning",
-      "studyType": "Master of Science",
+      "area": "Informatique - Machine Learning",
+      "studyType": "Master",
       "startDate": "Jan. 2017",
-      "endDate": "June 2017",
+      "endDate": "Juin 2017",
       "gpa": null,
       "courses": [],
       "projects": [],
@@ -139,10 +116,10 @@
       "institution": "Georgia Tech Lorraine",
       "website": "http://lorraine.gatech.edu/",
       "logoUrl": "./images/gtl.png",
-      "area": "CS - Machine Learning",
-      "studyType": "Master of Science",
+      "area": "Informatique - Machine Learning",
+      "studyType": "Master",
       "startDate": "Jan. 2016",
-      "endDate": "June 2016",
+      "endDate": "Juin 2016",
       "gpa": "4.0",
       "courses": [
         "CS7641 - Machine Learning",
@@ -160,23 +137,23 @@
       "institution": "INSA Lyon",
       "website": "https://www.insa-lyon.fr/en/",
       "logoUrl": "./images/insa.jpeg",
-      "area": "Computer Science",
-      "studyType": "Engineering Degree (Master)",
+      "area": "Informatique",
+      "studyType": "Diplôme d'ingénieur",
       "startDate": "Sept. 2011",
-      "endDate": "Dec. 2015",
-      "gpa": "3rd year Ranking: 6/112, Average: 14.85/20",
+      "endDate": "Déc. 2015",
+      "gpa": "Classement 3e année: 6/112, Moyenne 3e année: 14.85/20",
       "courses": [
-        "English - Complete fluency in Academic & Professional domains - TOEFL: 105/120, TOEIC: 985/990 & GRE, Verbal Reasoning: 152/170",
-        "German - Spoken - B1 European certification"
+        "Anglais - Maîtrise académique et professionnelle - TOEFL: 105/120, TOEIC: 985/990 & GRE, Verbal Reasoning: 152/170",
+        "Allemand - Parlé - Certification Européenne B1"
       ],
       "projects": [
-        "SmartCity Mobile App - Best app of the school - Node.js backend + Swift App",
-        "Google Hashcode Contest, first edition - Qualified to compete at Google France"
+        "Application SmartCity - Meilleure app de la promo - Backend Node.js + App Swift",
+        "1ère édition du Google Hashcode - Qualifié pour participer à Google France"
       ],
       "openSource": [
         {
           "type": "Contributions",
-          "project": "Firefox for Android",
+          "project": "Firefox pour Android",
           "url": "https://www.mozilla.org/en-US/firefox/android/"
         }
       ]
@@ -184,7 +161,7 @@
   ],
   "skills": [
     {
-      "name": "Data Analytics & Machine Learning",
+      "name": "Analyse de données & Machine Learning",
       "level": "Good",
       "keywords": [
         "Python",
@@ -195,7 +172,7 @@
       ]
     },
     {
-      "name": "Web Backend Development",
+      "name": "Developpement Backend",
       "level": "Expert",
       "keywords": [
         "Node.js",
@@ -205,7 +182,7 @@
       ]
     },
     {
-      "name": "Web Frontend Development",
+      "name": "Developpement Wab",
       "level": "Expert",
       "keywords": [
         "Javascript ES7",
@@ -219,7 +196,7 @@
       ]
     },
     {
-      "name": "Mobile Development",
+      "name": "Developpement Mobile",
       "level": "Good",
       "keywords": [
         "React Native",
@@ -228,36 +205,13 @@
       ]
     },
     {
-      "name": "Operations Development",
+      "name": "Dev Ops",
       "level": "Good",
       "keywords": [
         "UNIX Administration",
         "Ansible",
         "Containers & Virtualization",
         "Docker"
-      ]
-    }
-  ],
-  "languages": [
-    {
-      "language": "English",
-      "fluency": "Fluency & Academic Proficiency (TOEFL: 105/120, TOEIC: 985/990 & GRE, Verbal Reasoning: 152/170)"
-    },
-    {
-      "language": "French",
-      "fluency": "Native Speaker"
-    },
-    {
-      "language": "German",
-      "fluency": "Spoken (B1 european certification)"
-    }
-  ],
-  "interests": [
-    {
-      "name": "Hackathons & Competitions",
-      "keywords": [
-        "Gatech HackCIC second place winner (mobile app competition)",
-        "Google Hashcode first edition, finalist (algoritmic contest)"
       ]
     }
   ]

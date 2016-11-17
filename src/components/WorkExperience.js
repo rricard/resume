@@ -90,7 +90,7 @@ const WorkExperience = (props: WorkExperienceProps): ?React.Element<*> => {
                   <Glyph icon="git-pull-request" /> Open Src.
                 </span>
                 <span className="WorkExperience_pointDescription">
-                  <span> {proj.get('type')}</span> on
+                  <span> {proj.get('type')}</span>,
                   <strong> {proj.get('project')} </strong>
                 </span>
               </a>

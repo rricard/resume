@@ -65,7 +65,7 @@ const AcademicExperience = (props: AcademicExperienceProps): ?React.Element<*> =
           </Col>
         </Row>
         {education.get('gpa') ?
-          <span><strong>Grades/GPA: </strong>{education.get('gpa')}</span> :
+          <span><strong>{window.location.search === '?fr' ? 'Notes' : 'Grades/GPA'}: </strong>{education.get('gpa')}</span> :
           null}
         <ul className="AcademicExperience_points">
           {education.get('openSource').map(proj => proj ?
@@ -75,7 +75,7 @@ const AcademicExperience = (props: AcademicExperienceProps): ?React.Element<*> =
                   <Glyph icon="git-pull-request" /> Open Src.
                 </span>
                 <span className="AcademicExperience_pointDescription">
-                  <span> {proj.get('type')}</span> on
+                  <span> {proj.get('type')}</span>,
                   <strong> {proj.get('project')} </strong>
                 </span>
               </a>

@@ -16,7 +16,7 @@ export type DataState = Map<string, ?any>;
 
 export const initialState = Map({
   loading: false,
-  language: 'en',
+  language: window.location.search === '?fr' ? 'fr' : 'en',
   error: null,
   data: null,
 });

@@ -40,7 +40,7 @@ const propertyResolver = (fieldName, root) => root ? root[fieldName] : null;
 export const fetchData = (
   query: GraphQLDocument,
   variables: any = {},
-  language: string = 'en'
+  language: string = window.location.search === '?fr' ? 'fr' : 'en'
 ): (dispatch: Function) => Promise<any> =>
   (dispatch) => {
     dispatch(requestData({language, query, variables}))
