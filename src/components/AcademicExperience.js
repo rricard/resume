@@ -65,7 +65,7 @@ const AcademicExperience = (props: AcademicExperienceProps): ?React.Element<*> =
           </Col>
         </Row>
         {education.get('gpa') ?
-          <span><strong>{window.location.search === '?fr' ? 'Notes' : 'Grades/GPA'}: </strong>{education.get('gpa')}</span> :
+          <span><strong>{window.location.search === '?fr' ? 'Notes' : 'GPA'}: </strong>{education.get('gpa')}</span> :
           null}
         <ul className="AcademicExperience_points">
           {education.get('openSource').map(proj => proj ?
@@ -82,7 +82,7 @@ const AcademicExperience = (props: AcademicExperienceProps): ?React.Element<*> =
             </li> :
             null
           )}
-          {education.get('projects').map(proj =>
+          {education.has('projects') && education.get('projects').map(proj =>
             <li key={proj} className="AcademicExperience_point">
               <span className="AcademicExperience_project">
                 <Glyph icon="code" /> Project
@@ -92,7 +92,7 @@ const AcademicExperience = (props: AcademicExperienceProps): ?React.Element<*> =
               </span>
             </li>
           )}
-          {education.get('courses').map(course =>
+          {education.has('courses') && education.get('courses').map(course =>
             <li key={course} className="AcademicExperience_point">
               <span className="AcademicExperience_course">
                 <Glyph icon="repo" /> Course

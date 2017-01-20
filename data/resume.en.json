@@ -6,7 +6,7 @@
     "email": "rricard@gatech.edu",
     "phone": "+33 6 70 49 66 79",
     "website": "http://rricard.me",
-    "summary": "JavaScript, Node.js & React.js expert. Heavy user of functional Programming, Redux & GraphQL. Machine Learning enthusiast. I am mostly a self-starter loving to build great products while tackling hard problems!",
+    "summary": "JavaScript, Node.js & React.js expert. Heavy user of functional Programming, Redux & GraphQL. Machine Learning enthusiast. I am mostly a self-starter loving to build great developer experiences & products while tackling hard problems!",
     "location": {
       "address": "103 chemin des genevriers",
       "postalCode": "73190",
@@ -128,26 +128,17 @@
       "logoUrl": "./images/gatech.jpg",
       "area": "CS - Machine Learning",
       "studyType": "Master of Science",
-      "startDate": "Jan. 2017",
-      "endDate": "June 2017",
-      "gpa": null,
-      "courses": [],
-      "projects": [],
-      "openSource": []
-    },
-    {
-      "institution": "Georgia Tech Lorraine",
-      "website": "http://lorraine.gatech.edu/",
-      "logoUrl": "./images/gtl.png",
-      "area": "CS - Machine Learning",
-      "studyType": "Master of Science",
       "startDate": "Jan. 2016",
-      "endDate": "June 2016",
-      "gpa": "4.0",
+      "endDate": "June 2017",
+      "gpa": "4.0 (without the last semester: TBA)",
       "courses": [
         "CS7641 - Machine Learning",
         "CS7641 - ML for Trading",
-        "CS6250 - Computer Networks"
+        "CS6242 - Data & Visual Analytics",
+        "CS6240 - Deep Learning",
+        "CS6505 - Computability & Algorithms",
+        "CS6250 - Computer Networks",
+        "CS7632 - Game AI"
       ],
       "projects": [
         "CS8803 - Mobile App - 2nd best app - Powered by React Native & Relay",
@@ -164,8 +155,11 @@
       "studyType": "Engineering Degree (Master)",
       "startDate": "Sept. 2011",
       "endDate": "Dec. 2015",
-      "gpa": "3rd year Ranking: 6/112, Average: 14.85/20",
+      "gpa": null,
       "courses": [
+        "Fundamental background in Math & Physics",
+        "Fundamental CS courses: Algorithms, Databases, Networking, ...",
+        "Advanced Operating Systems",
         "English - Complete fluency in Academic & Professional domains - TOEFL: 105/120, TOEIC: 985/990 & GRE, Verbal Reasoning: 152/170",
         "German - Spoken - B1 European certification"
       ],
@@ -246,10 +240,6 @@
     {
       "language": "French",
       "fluency": "Native Speaker"
-    },
-    {
-      "language": "German",
-      "fluency": "Spoken (B1 european certification)"
     }
   ],
   "interests": [
