@@ -68,7 +68,7 @@ const WorkExperience = (props: WorkExperienceProps): ?React.Element<*> => {
         </Row>
         {work.get('summary')}
         <ul className="WorkExperience_points">
-          {work.get('talks').map(talk => talk ?
+          {work.has('talks') && work.get('talks').map(talk => talk ?
             <li key={talk.get('url')}>
               <a href={talk.get('url')} className="WorkExperience_point">
                 <span className="WorkExperience_talk">
@@ -83,7 +83,7 @@ const WorkExperience = (props: WorkExperienceProps): ?React.Element<*> => {
             </li> :
             null
           )}
-          {work.get('openSource').map(proj => proj ?
+          {work.has('openSource') && work.get('openSource').map(proj => proj ?
             <li key={proj.get('url')}>
               <a href={proj.get('url')} className="WorkExperience_point">
                 <span className="WorkExperience_open">
