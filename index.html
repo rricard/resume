@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta name="description" content="Robin Ricard - Software Engineer & ECMA TC39 delegate for Bloomberg - Resume">
+    <title>Robin Ricard - Resume</title>
+    <style>
+        * {
+            font-family: 'Iosevka Web', monospace;
+            font-size: 1em;
+        }
+        pre {
+            width: 80ch;
+            margin: auto;
+        }
+        nav, p {
+            display: block;
+            text-align: center;
+            color: darkslategrey;
+        }
+        code {
+            background-color: lightgrey;
+            padding-left: .2em;
+            padding-right: .2em;
+            border-radius: .2em;
+        }
+        @media print {
+            nav, noscript {
+                display: none;
+            }
+        }
+        @media screen {
+            body {
+                background-color: #fcfcfc;
+            }
+            pre {
+                background-color: white;
+                margin-top: 3em;
+                margin-bottom: 3em;
+                padding: 4em;
+                border: solid 1px #eee;
+            }
+        }
+    </style>
+    <link rel="preload" href="./iosevka/iosevka.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="./iosevka/iosevka.css"></noscript>
+</head>
+<body>
+    <pre>
+Robin Ricard                                                    robin@rricard.me
+============
+Software Engineer & ECMA TC39 delegate for Bloomberg                  London, UK
+
+Work experience
+---------------
+
+ * Bloomberg Finance L.P.                             New York, NY => London, UK
+
+   Software Infrastructure Engineer & TC39 Delegate             Oct. 2017 => Now
+
+   - Working on the Bloomberg Terminal JS & TypeScript Build Infrastructure
+   - Brought the Record & Tuple JS Proposal from Stage 0 to Stage 2 (out of 4)
+   - Co-presented Record & Tuple at NodeConf Remote 2020
+   - Worked previously on the Bloomberg Terminal UI Infrastructure
+   - Worked previously on Bloomberg Terminal internal debugging tools
+
+ * Jolicloud                                              Lyon, France => Remote
+
+   Intern => Contractor                                   Dec. 2015 => Dec. 2016
+
+   - Open source contributor to React.js and Apollo GraphQL
+
+Education
+---------
+
+ * Georgia Institute of Technology                                   Atlanta, GA
+
+   Master of Science in Computer Science, Machine Learning          2016 => 2017
+
+   - GPA: 4.0
+
+ * INSA Lyon                                                        Lyon, France
+
+   Master of Engineering in Computer Science                        2011 => 2017
+
+   - Open Source contributor to Mozilla Firefox for Android
+
+ * Lycée Vaugelas                                               Chambéry, France
+
+   Bachelier Mention Très Bien avec Félicitations du Jury           2009 => 2011
+    </pre>
+    <noscript>
+        <p>You are seeing this page without JS enabled, that is fine,<br/>but you might be missing a few updates to the resume.</p>
+        <p>Enabling JS will fetch the latest version of the resume<br/>or you can just click <a href="./README">here</a> to see it in plain text.</p>
+    </noscript>
+    <nav>Hit <code>⌘</code>+<code>P</code> (Mac) or <code>Ctrl</code>+<code>P</code> (PC) on your keyboard to print or make a PDF</nav>
+    <script>
+        fetch("./README").then(req => req.text()).then(text => {
+            document.querySelector("pre").innerHTML = text;
+        });
+    </script>
+</body>
+</html>
